@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Meeting.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MeetingPlanner</a> &gt; <a href="index.source.html" class="el_package">edu.sc.csce747.MeetingPlanner</a> &gt; <span class="el_source">Meeting.java</span></div><h1>Meeting.java</h1><pre class="source lang-java linenums">package edu.sc.csce747.MeetingPlanner;
+
+import java.util.ArrayList;
+
+public class Meeting {
+	private int month;
+	private int day;
+	private int start;
+	private int end;
+	private ArrayList&lt;Person&gt; attendees; 
+	private Room room;
+	private String description;
+	
+	/**
+	 * Default constructor
+	 */
+<span class="fc" id="L17">	public Meeting(){</span>
+<span class="fc" id="L18">	}</span>
+	
+	/**
+	 * Constructor that can be used to block off a whole day -
+	 * such as for a vacation
+	 * @param month - The month of the meeting (1-12).
+	 * @param day - The day of the meeting (1-31).
+	 */
+<span class="fc" id="L26">	public Meeting(int month, int day){</span>
+<span class="fc" id="L27">		this.month=month;</span>
+<span class="fc" id="L28">		this.day=day;</span>
+<span class="fc" id="L29">		this.start=0;</span>
+<span class="fc" id="L30">		this.end=23;</span>
+<span class="fc" id="L31">	}</span>
+	
+	/**
+	 * Constructor that can be used to block off a whole day -
+	 * such as for a vacation
+	 * @param month - The month of the meeting (1-12).
+	 * @param day - The day of the meeting (1-31).
+	 * @param description - A description of the meeting.
+	 */
+<span class="fc" id="L40">	public Meeting(int month, int day, String description){</span>
+<span class="fc" id="L41">		this.month=month;</span>
+<span class="fc" id="L42">		this.day=day;</span>
+<span class="fc" id="L43">		this.start=0;</span>
+<span class="fc" id="L44">		this.end=23;</span>
+<span class="fc" id="L45">		this.description= description;</span>
+<span class="fc" id="L46">	}</span>
+	
+	/**
+	 * More detailed constructor
+	 * @param month - The month of the meeting (1-12).
+	 * @param day - The day of the meeting (1-31).
+	 * @param start - The time the meeting starts (0-23).
+	 * @param end - The time the meeting ends (0-23).
+	 */
+<span class="fc" id="L55">	public Meeting(int month, int day, int start, int end){</span>
+<span class="fc" id="L56">		this.month=month;</span>
+<span class="fc" id="L57">		this.day=day;</span>
+<span class="fc" id="L58">		this.start=start;</span>
+<span class="fc" id="L59">		this.end=end;</span>
+<span class="fc" id="L60">	}</span>
+	
+	/**
+	 * More detailed constructor
+	 * @param month - The month of the meeting (1-12).
+	 * @param day - The day of the meeting (1-31).
+	 * @param start - The time the meeting starts (0-23).
+	 * @param end - The time the meeting ends (0-23).
+	 * @param attendees - The people attending the meeting.
+	 * @param room - The room that the meeting is taking place in.
+	 * @param description - A description of the meeting.
+	 */
+<span class="fc" id="L72">	public Meeting(int month, int day, int start, int end, ArrayList&lt;Person&gt; attendees, Room room, String description){</span>
+<span class="fc" id="L73">		this.month=month;</span>
+<span class="fc" id="L74">		this.day=day;</span>
+<span class="fc" id="L75">		this.start=start;</span>
+<span class="fc" id="L76">		this.end=end;</span>
+<span class="fc" id="L77">		this.attendees = attendees;</span>
+<span class="fc" id="L78">		this.room = room;</span>
+<span class="fc" id="L79">		this.description = description;</span>
+<span class="fc" id="L80">	}</span>
+
+	/**
+	 * Add an attendee to the meeting.
+	 * @param attendee - The person to add.
+	 */
+	public void addAttendee(Person attendee) {
+<span class="fc" id="L87">		this.attendees.add(attendee);</span>
+<span class="fc" id="L88">	}</span>
+	
+	/**
+	 * Removes an attendee from the meeting.
+	 * @param attendee - The person to remove.
+	 */
+	public void removeAttendee(Person attendee) {
+<span class="fc" id="L95">		this.attendees.remove(attendee);</span>
+<span class="fc" id="L96">	}</span>
+	
+	/**
+	 * Returns information about the meeting as a formatted string.
+	 * @return String - Information about the meeting.
+	 */
+	public String toString(){
+<span class="fc bfc" id="L103" title="All 4 branches covered.">		String roomId = (room == null || room.getID() == null) ? &quot;&quot; : room.getID();</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">		String desc = (description == null) ? &quot;&quot; : description;</span>
+<span class="fc" id="L105">		String info = month+&quot;/&quot;+day+&quot;, &quot;+start+&quot; - &quot;+end+&quot;,&quot;+roomId+&quot;: &quot;+desc+&quot;\nAttending: &quot;;</span>
+		
+<span class="fc bfc" id="L107" title="All 4 branches covered.">		if(attendees != null &amp;&amp; !attendees.isEmpty()){</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">			for(Person attendee : attendees){</span>
+<span class="fc" id="L109">				info = info + attendee.getName() + &quot;,&quot;;</span>
+<span class="fc" id="L110">			}</span>
+			// remove trailing comma
+<span class="fc" id="L112">			info = info.substring(0, info.length()-1);</span>
+		} else {
+<span class="fc" id="L114">			info = info + &quot;None&quot;;</span>
+		}
+		
+<span class="fc" id="L117">		return info;</span>
+	}
+	
+	/**
+	 * Getters and Setters
+	 */
+	
+	public int getMonth() {
+<span class="fc" id="L125">		return month;</span>
+	}
+
+	public void setMonth(int month) {
+<span class="fc" id="L129">		this.month = month;</span>
+<span class="fc" id="L130">	}</span>
+
+	public int getDay() {
+<span class="fc" id="L133">		return day;</span>
+	}
+
+	public void setDay(int day) {
+<span class="fc" id="L137">		this.day = day;</span>
+<span class="fc" id="L138">	}</span>
+
+	public int getStartTime() {
+<span class="fc" id="L141">		return start;</span>
+	}
+
+	public void setStartTime(int start) {
+<span class="fc" id="L145">		this.start = start;</span>
+<span class="fc" id="L146">	}</span>
+
+	public int getEndTime() {
+<span class="fc" id="L149">		return end;</span>
+	}
+
+	public void setEndTime(int end) {
+<span class="fc" id="L153">		this.end = end;</span>
+<span class="fc" id="L154">	}</span>
+
+	public ArrayList&lt;Person&gt; getAttendees() {
+<span class="fc" id="L157">		return attendees;</span>
+	}
+
+	public Room getRoom() {
+<span class="fc" id="L161">		return room;</span>
+	}
+
+	public void setRoom(Room room) {
+<span class="fc" id="L165">		this.room = room;</span>
+<span class="fc" id="L166">	}</span>
+	
+	public String getDescription() {
+<span class="fc" id="L169">		return description;</span>
+	}
+
+	public void setDescription(String description) {
+<span class="fc" id="L173">		this.description = description;</span>
+<span class="fc" id="L174">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.023" tests="29" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/test-classes:/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/classes:/Users/macbook/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/macbook/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="MN"/>
+    <property name="sun.boot.library.path" value="/Users/macbook/.sdkman/candidates/java/17.0.9-tem/lib"/>
+    <property name="sun.java.command" value="/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/surefire/surefirebooter9204674497119497765.jar /Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/surefire 2025-11-05T23-54-39_690-jvmRun1 surefire45472328828884547tmp surefire_04266268682820000030tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/test-classes:/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/classes:/Users/macbook/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/macbook/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/macbook"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.home" value="/Users/macbook/.sdkman/candidates/java/17.0.9-tem"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/surefire/surefirebooter9204674497119497765.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.9+9"/>
+    <property name="user.name" value="macbook"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.0.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.9+9"/>
+    <property name="localRepository" value="/Users/macbook/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/7s/ysqf01hx7t5d1yv4hgv1y4280000gn/T/"/>
+    <property name="java.version" value="17.0.9"/>
+    <property name="user.dir" value="/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/macbook/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.9+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testMainMenu_callsScheduleBranch" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_callsCheckRoomBranch" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testCheckRoomAvailability_handlesTimeConflictException" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_callsCheckAgendaPersonBranch" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testScheduleVacation_bookingSuccessSameMonth" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMain_static_callsExit" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.011"/>
+  <testcase name="testCheckEmployeeAvailability_printsNames" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMain_triggersExit" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_callsCheckEmployeeBranch" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.002"/>
+  <testcase name="testScheduleVacation_bookingAcrossMonthsSuccess" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testCheckAgendaRoom_printsAgenda" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_callsCheckAgendaRoomBranch" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testScheduleVacation_addsMeetingsForInterveningMonths" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.002"/>
+  <testcase name="testInputOutput_handlesIOExceptionAndCallsMainMenu" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testScheduleVacation_conflictsInInterveningAndEndMonths" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testScheduleVacation_cancelAndConflictDetected" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testScheduleMeeting_attendeeAddMeetingThrows_callsMainMenu" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testCheckAgendaPerson_printsAgenda" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testScheduleVacation_bookingAddMeetingThrowsTriggersMainMenu" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testScheduleVacation_conflictInStartMonth" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testScheduleMeeting_isBusyThrows_callsMainMenu" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testCheckRoomAvailability_printsRooms" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_handlesNonNumberThenSchedule" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testScheduleMeeting_createsMeeting" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_callsVacationBranch" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testCheckAgendaRoomAndPerson_invalidNamesPrintError" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testScheduleMeeting_invalidRoomThenRoomAddConflict" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+  <testcase name="testMainMenu_handlesInvalidNumberThenSchedule" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0.001"/>
+  <testcase name="testCheckEmployeeAvailability_handlesTimeConflictException" classname="edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest" time="0"/>
+</testsuite>

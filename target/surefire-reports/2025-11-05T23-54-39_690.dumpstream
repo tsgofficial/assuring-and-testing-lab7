@@ -1,0 +1,12 @@
+# Created at 2025-11-05T23:54:40.155
+WARNING: A terminally deprecated method in java.lang.System has been called
+
+# Created at 2025-11-05T23:54:40.156
+WARNING: System::setSecurityManager has been called by edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest (file:/Users/macbook/Documents/school/assuring-and-testing/MeetingPlanner/target/test-classes/)
+
+# Created at 2025-11-05T23:54:40.156
+WARNING: Please consider reporting this to the maintainers of edu.sc.csce747.MeetingPlanner.PlannerInterfaceCoverageTest
+
+# Created at 2025-11-05T23:54:40.156
+WARNING: System::setSecurityManager will be removed in a future release
+
